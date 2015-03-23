@@ -1,0 +1,28 @@
+{
+    "name":         "itkg/api-doc-bundle",
+    "type":         "library",
+    "description":  "API doc bundle",
+    "keywords":     ["bundle", "api", "doc", "interakting"],
+    "homepage":     "http://github.com/itkg/api-doc-bundle",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Pascal DENIS",
+            "email":    "pascal.denis.75@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony":"~2",
+        "nelmio/api-doc-bundle": "~2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Itkg\\ApiDocBundle": ""
+        }
+    },
+    "target-dir": "Itkg/ApiDocBundle"
+}
