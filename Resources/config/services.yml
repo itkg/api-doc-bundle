@@ -1,14 +1,15 @@
 parameters:
-    itkg_api_doc.annotation_handler.resource.class: Itkg\ApiDocBundle\AnnotationHandler\ResourceHandler
+    itkg_api_doc.annotation_handler.markdown_resource.class: Itkg\ApiDocBundle\AnnotationHandler\MarkdownResourceHandler
     itkg_api_doc.parser.markdown.class: Parsedown
+    itkg_api_doc.resources.root_path: %kernel.root_dir%/Resources/doc
 services:
     itkg_api_doc.parser.markdown:
         class: %itkg_api_doc.parser.markdown.class%
 
-    itkg_api_doc.annotation_handler.resource:
-        class: %itkg_api_doc.annotation_handler.resource.class%
+    itkg_api_doc.annotation_handler.markdown_resource:
+        class: %itkg_api_doc.annotation_handler.markdown_resource.class%
         arguments:
             - @itkg_api_doc.parser.markdown
-            - %kernel.root_dir%/Resources/doc
+            - %itkg_api_doc.resources.root_path%
         tags:
             - { name: nelmio_api_doc.extractor.handler }

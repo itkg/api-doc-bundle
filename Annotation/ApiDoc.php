@@ -18,7 +18,7 @@ class ApiDoc extends BaseApiDoc
     /**
      * @var string
      */
-    protected $resourcesContent;
+    protected $resourcesContent = '';
 
     /**
      * @param array $data
